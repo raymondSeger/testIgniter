@@ -49,10 +49,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-// Router for / (starting point)
+
+// Route for / (starting point)
 $route['default_controller'] 	= 'welcome'; 		// Welcome Controller, index method
 
+// Route for Billy Controller
 $route['billy'] 				= 'billy/indexMethod';		  	// Billy controller, indexMethod
+$route['billy/(:any)/(:any)/(:any)'] 				= 'billy/testMethod/$1/$2/$3';  // Billy controller, testMethod
+
 
 // Route for news
 $route['news/create'] 			= 'news/create';	// News Controller, create method
