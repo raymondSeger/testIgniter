@@ -66,6 +66,8 @@ $route['billy/(:any)/(:any)/(:any)'] 	= 'billy/testMethod/$1/$2/$3';  // Billy c
 $route['billy/testCommonFunction'] 		= 'billy/testCommonFunction/';  // Billy controller, testCommonFunction method
 $route['billy/testPassingDataToView']   = 'billy/testPassingDataToView/';  // Billy controller, testPassingDataToView method
 $route['billy/testGetDataFromModel']    = 'billy/testGetDataFromModel/';  // Billy controller, testGetDataFromModel method
+$route['billy/testingHelpers']    		= 'billy/testingHelpers/';  // Billy controller, testingHelpers method
+
 
 // Route for news
 $route['news/create'] 			= 'news/create';	// News Controller, create method

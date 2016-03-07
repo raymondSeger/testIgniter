@@ -47,4 +47,16 @@ class Billy extends CI_Controller {
                 $this->load->model('Billy_model');
                 print_r( $this->Billy_model->get_all_items() );
         }
+
+        public function testingHelpers(){
+                // testing all the helpers
+                // http://www.codeigniter.com/user_guide/helpers/index.html
+                
+                $this->load->helper( array('array', 'cookie') );
+
+                set_cookie( "keyCookie", "value1", 365 * 24 * 60 * 60);
+                set_cookie( "keyCookie2", "value2", 365 * 24 * 60 * 60);
+
+                echo get_cookie( "keyCookie" );
+        }
 }
