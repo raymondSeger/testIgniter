@@ -53,14 +53,7 @@ class Billy extends CI_Controller {
                 // http://www.codeigniter.com/user_guide/helpers/index.html
                 
                 $this->load->helper( array('array', 'cookie', 'date', 'directory', 'download', 'inflector', 'url') );
-                
-                // will not work if it is not view
-                $this->output->cache(2);
-
-                $data['title']  = 'Index Page 2 For Billy';
-
-                $this->load->view('templates/header', $data);
-                $this->load->view('billy/index', $data);
-                $this->load->view('templates/footer');
+               
+                show_error('message', '401', 'An Error Was Encountered');
         }
 }
