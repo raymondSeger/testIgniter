@@ -52,11 +52,15 @@ class Billy extends CI_Controller {
                 // testing all the helpers
                 // http://www.codeigniter.com/user_guide/helpers/index.html
                 
-                $this->load->helper( array('array', 'cookie') );
+                $this->load->helper( array('array', 'cookie', 'date', 'directory', 'download', 'inflector', 'url') );
+                
+                // will not work if it is not view
+                $this->output->cache(2);
 
-                set_cookie( "keyCookie", "value1", 365 * 24 * 60 * 60);
-                set_cookie( "keyCookie2", "value2", 365 * 24 * 60 * 60);
+                $data['title']  = 'Index Page 2 For Billy';
 
-                echo get_cookie( "keyCookie" );
+                $this->load->view('templates/header', $data);
+                $this->load->view('billy/index', $data);
+                $this->load->view('templates/footer');
         }
 }
