@@ -91,4 +91,38 @@ class Billy extends CI_Controller {
                 // get cookie
                 echo $this->input->cookie('keyCookie');
         }
+
+        /*
+         * When a page is loaded, the session class will check to see if valid session cookie is sent by the user’s browser.
+         * If a sessions cookie does not exist (or if it doesn’t match one stored on the server or has expired) a new session will be created and saved.
+         * If a valid session does exist, its information will be updated. With each update, the session ID may be regenerated if configured to do so.
+         * Session data is simply an array associated with a particular session ID (cookie).
+         */
+        public function testSession() {
+                $this->load->library('session');
+
+                print_r($this->session);
+
+                // add data. Way 1
+                $newdata = array(
+                        'username'  => 'johndoe',
+                        'email'     => 'johndoe@some-site.com',
+                        'logged_in' => TRUE
+                );
+
+                $this->session->set_userdata($newdata);
+
+                // add data. Way 2
+                $this->session->set_userdata('some_name', 'some_value');
+
+                session_write_close(); // once we no longer need to use session data, release the lock. DATA STILL EXIST, don't worry
+                
+                // to destroy session / log out
+                // $this->session->sess_destroy();
+                
+                // you can also use Tempdata and Flashdata
+                // /user_guide/libraries/sessions.html#tempdata
+                // Tempdata last specified time, flashdata only lasted one time visit.
+
+        }
 }
