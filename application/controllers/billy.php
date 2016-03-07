@@ -79,4 +79,12 @@ class Billy extends CI_Controller {
                         $this->load->view('billy/upload_success', $data);
                 }
         }
+
+        // test form data receive, use POSTMAN
+        // THIS WILL NOT WORK IF CSRF IS ON, because you need CSRF data too
+        public function handleFormData() {
+                echo $this->input->post('key1');
+                echo '<br />';
+                echo $this->input->post('key2');
+        }
 }
