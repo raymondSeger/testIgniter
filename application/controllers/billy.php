@@ -147,5 +147,22 @@ class Billy extends CI_Controller {
 
                 echo $this->pagination->create_links();
         }
-        
+
+        public function handleFormValidation() {
+                $this->load->helper(array('form', 'url'));
+                $this->load->library('form_validation');
+
+                // set the validation rules, this is super important
+                $this->form_validation->set_rules('username', 'Username', 'required');
+                $this->form_validation->set_rules('password', 'Password', 'required');
+                $this->form_validation->set_rules('passconf', 'Password Confirmation', 'required');
+                $this->form_validation->set_rules('email', 'Email', 'required');
+
+                if ($this->form_validation->run() == FALSE) {
+                        $this->load->view('billy/form_validation');
+                } else {
+                        $this->load->view('billy/form_validation_success');
+                }
+        }
+
 }
