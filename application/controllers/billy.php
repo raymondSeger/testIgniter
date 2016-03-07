@@ -54,8 +54,29 @@ class Billy extends CI_Controller {
                 
                 $this->load->helper( array('array', 'cookie', 'date', 'directory', 'download', 'inflector', 'url') );
 
-                $this->config->load('custom_config', TRUE);
+                echo $_SERVER['CI_ENV'];
+        }
 
-                echo $this->config->item('my_name', 'custom_config');
+        public function handleUpload() {
+                $this->load->helper(array('form', 'url'));
+
+                $config['upload_path']          = 'D:/wamp/www/testIgniter/application/uploads/';
+                $config['allowed_types']        = 'gif|jpg|png';
+                $config['max_size']             = '100';
+                $config['max_width']            = '1024';
+                $config['max_height']           = '768';
+
+                $this->load->library('upload', $config); // load the upload library
+
+                // try do_upload, if error, show the error, if not, show upload_success view
+                if ( ! $this->upload->do_upload('userFileName')) {
+                        $error = array('error' => $this->upload->display_errors());
+
+                        $this->load->view('billy/upload_form', $error);
+                }  else {
+                        $data = array('upload_data' => $this->upload->data());
+
+                        $this->load->view('billy/upload_success', $data);
+                }
         }
 }

@@ -67,6 +67,7 @@ $route['billy/testCommonFunction'] 		= 'billy/testCommonFunction/';  // Billy co
 $route['billy/testPassingDataToView']   = 'billy/testPassingDataToView/';  // Billy controller, testPassingDataToView method
 $route['billy/testGetDataFromModel']    = 'billy/testGetDataFromModel/';  // Billy controller, testGetDataFromModel method
 $route['billy/testingHelpers']    		= 'billy/testingHelpers/';  // Billy controller, testingHelpers method
+$route['billy/handleUpload']    		= 'billy/handleUpload/';  // Billy controller, handleUpload method
 
 
 // Route for news
