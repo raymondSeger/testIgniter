@@ -50,6 +50,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+/*
+ * Route will call controller, Controller will call Model and show the Views.
+ * Views are never called directly, they must be loaded by a controller.
+ * http://www.codeigniter.com/user_guide/general/views.html
+ */
+
+
 // Route for / (starting point)
 $route['default_controller'] 	= 'welcome'; 		// Welcome Controller, index method
 
@@ -57,6 +64,8 @@ $route['default_controller'] 	= 'welcome'; 		// Welcome Controller, index method
 $route['billy'] 						= 'billy/indexMethod';		  	// Billy controller, indexMethod method
 $route['billy/(:any)/(:any)/(:any)'] 	= 'billy/testMethod/$1/$2/$3';  // Billy controller, testMethod method
 $route['billy/testCommonFunction'] 		= 'billy/testCommonFunction/';  // Billy controller, testCommonFunction method
+$route['billy/testPassingDataToView']   = 'billy/testPassingDataToView/';  // Billy controller, testCommonFunction method
+
 
 // Route for news
 $route['news/create'] 			= 'news/create';	// News Controller, create method

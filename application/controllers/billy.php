@@ -36,4 +36,10 @@ class Billy extends CI_Controller {
                 var_dump( is_cli() );
                 
         }
+
+        public function testPassingDataToView() {
+                $data['todo_list'] = array('Clean House', 'Call Mom', 'Run Errands');
+
+                $this->load->view('billy/testPassingData', $data);
+        }
 }
