@@ -86,5 +86,9 @@ class Billy extends CI_Controller {
                 echo $this->input->post('key1');
                 echo '<br />';
                 echo $this->input->post('key2');
+
+                echo '<br />';
+                // get cookie
+                echo $this->input->cookie('keyCookie');
         }
 }
