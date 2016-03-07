@@ -64,8 +64,8 @@ $route['default_controller'] 	= 'welcome'; 		// Welcome Controller, index method
 $route['billy'] 						= 'billy/indexMethod';		  	// Billy controller, indexMethod method
 $route['billy/(:any)/(:any)/(:any)'] 	= 'billy/testMethod/$1/$2/$3';  // Billy controller, testMethod method
 $route['billy/testCommonFunction'] 		= 'billy/testCommonFunction/';  // Billy controller, testCommonFunction method
-$route['billy/testPassingDataToView']   = 'billy/testPassingDataToView/';  // Billy controller, testCommonFunction method
-
+$route['billy/testPassingDataToView']   = 'billy/testPassingDataToView/';  // Billy controller, testPassingDataToView method
+$route['billy/testGetDataFromModel']    = 'billy/testGetDataFromModel/';  // Billy controller, testGetDataFromModel method
 
 // Route for news
 $route['news/create'] 			= 'news/create';	// News Controller, create method

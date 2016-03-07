@@ -42,4 +42,9 @@ class Billy extends CI_Controller {
 
                 $this->load->view('billy/testPassingData', $data);
         }
+
+        public function testGetDataFromModel(){
+                $this->load->model('Billy_model');
+                print_r( $this->Billy_model->get_all_items() );
+        }
 }
