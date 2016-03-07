@@ -179,4 +179,20 @@ class Billy extends CI_Controller {
                 }
         }
 
+        public function testNewComposerLibrary() {
+
+                // test using https://github.com/sebastianbergmann/php-timer
+                
+                PHP_Timer::start();
+
+                for($i=0; $i < 99999; $i++) {
+
+                }
+
+                $time = PHP_Timer::stop();
+                var_dump($time);
+
+                print PHP_Timer::secondsToTimeString($time);
+        }
+
 }
