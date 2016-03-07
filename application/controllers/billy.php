@@ -9,6 +9,18 @@ class Billy extends CI_Controller {
                 parent::__construct();
         }
 
+        // _remap handles the routing instead of codeIgniter default routes.php
+        public function _remap( $method, $params = array() ) {
+                if ($method === 'testMethod')
+                {
+                        return call_user_func_array( array($this, $method), $params);
+                }
+                else
+                {
+                        $this->indexMethod();
+                }
+        }
+
         public function indexMethod()  {
                 $data['title']  = 'Index Page For Billy';
 
