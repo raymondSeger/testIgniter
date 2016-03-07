@@ -29,4 +29,11 @@ class Billy extends CI_Controller {
         public function testMethod($param1, $param2, $param3) {
                 $this->_echoResultForTestMethod($param1, $param2, $param3);
         }
+
+        public function testCommonFunction() {
+                // i was testing all the functions in 
+                // http://www.codeigniter.com/user_guide/general/common_functions.html
+                var_dump( is_cli() );
+                
+        }
 }
