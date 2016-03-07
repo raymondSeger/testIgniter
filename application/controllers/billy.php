@@ -128,13 +128,24 @@ class Billy extends CI_Controller {
         }
 
         public function handleLanguage() {
-
                 // load the language_file_lang file.
                 // give parameter to use indonesian instead of english (because english is the default in application/config/config.php )
                 $this->lang->load(array('language_file'), 'indonesian');
 
                 // get the message with the key "the_message";
-                echo $this->lang->line('the_message');;
-                
+                echo $this->lang->line('the_message');;  
         }
+
+        public function handlePagination() {
+                $this->load->library('pagination');
+
+                $config['base_url'] = 'http://example.com/index.php/test/page/';
+                $config['total_rows'] = 200;
+                $config['per_page'] = 20;
+
+                $this->pagination->initialize($config);
+
+                echo $this->pagination->create_links();
+        }
+        
 }

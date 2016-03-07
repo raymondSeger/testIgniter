@@ -71,6 +71,7 @@ $route['billy/handleUpload']    		= 'billy/handleUpload/';  // Billy controller,
 $route['billy/handleFormData']    		= 'billy/handleFormData/';  // Billy controller, handleFormData method
 $route['billy/testSession']    			= 'billy/testSession/';  // Billy controller, testSession method
 $route['billy/handleLanguage']    		= 'billy/handleLanguage/';  // Billy controller, handleLanguage method
+$route['billy/handlePagination']    	= 'billy/handlePagination/';  // Billy controller, handlePagination method
 
 
 // Route for news
