@@ -33,4 +33,23 @@ class News_model extends CI_Model {
         $query = $this->db->get_where('news', array('slug' => $slug));
         return $query->row_array();
 	}
+
+    // create one News Object, require $_POST['title'] and $_POST['text']
+    public function set_news() {
+        $this->load->helper('url');
+
+        // turn the title POST data to URL friend slug.
+        $slug = url_title($this->input->post('title'), 'dash', TRUE);
+
+        $data = array(
+            'title' => $this->input->post('title'),
+            'slug' => $slug,
+            'text' => $this->input->post('text')
+        );
+
+        // insert 1 News object to DB
+        return $this->db->insert('news', $data);
+    }
+
+
 }

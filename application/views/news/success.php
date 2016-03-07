@@ -1,0 +1,1 @@
+<h4>Congrats, you succeed in inserting 1 news object to Database</h4>
