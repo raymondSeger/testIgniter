@@ -82,6 +82,7 @@ class Billy extends CI_Controller {
 
         // test form data receive, use POSTMAN
         // THIS WILL NOT WORK IF CSRF IS ON, because you need CSRF data too
+        // You can also enable CSRF while giving exclude some routes: user_guide/libraries/security.html
         public function handleFormData() {
                 echo $this->input->post('key1');
                 echo '<br />';
