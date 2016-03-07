@@ -53,13 +53,9 @@ class Billy extends CI_Controller {
                 // http://www.codeigniter.com/user_guide/helpers/index.html
                 
                 $this->load->helper( array('array', 'cookie', 'date', 'directory', 'download', 'inflector', 'url') );
-               
-                $this->benchmark->mark('code_start');
 
-                // Some code happens here
+                $this->config->load('custom_config', TRUE);
 
-                $this->benchmark->mark('code_end');
-
-                echo $this->benchmark->elapsed_time('code_start', 'code_end');
+                echo $this->config->item('my_name', 'custom_config');
         }
 }
