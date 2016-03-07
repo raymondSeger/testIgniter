@@ -36,6 +36,7 @@ class News extends CI_Controller {
                 $this->load->view('templates/footer');
         }
 
+        // http://www.codeigniter.com/user_guide/tutorial/create_news_items.html
         public function create() {
                 // get the helper and libraries
                 $this->load->helper('form');
