@@ -126,4 +126,15 @@ class Billy extends CI_Controller {
                 // Tempdata last specified time, flashdata only lasted one time visit.
 
         }
+
+        public function handleLanguage() {
+
+                // load the language_file_lang file.
+                // give parameter to use indonesian instead of english (because english is the default in application/config/config.php )
+                $this->lang->load(array('language_file'), 'indonesian');
+
+                // get the message with the key "the_message";
+                echo $this->lang->line('the_message');;
+                
+        }
 }

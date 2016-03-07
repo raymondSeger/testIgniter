@@ -70,6 +70,7 @@ $route['billy/testingHelpers']    		= 'billy/testingHelpers/';  // Billy control
 $route['billy/handleUpload']    		= 'billy/handleUpload/';  // Billy controller, handleUpload method
 $route['billy/handleFormData']    		= 'billy/handleFormData/';  // Billy controller, handleFormData method
 $route['billy/testSession']    			= 'billy/testSession/';  // Billy controller, testSession method
+$route['billy/handleLanguage']    		= 'billy/handleLanguage/';  // Billy controller, handleLanguage method
 
 
 // Route for news
