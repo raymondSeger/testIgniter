@@ -73,6 +73,7 @@ $route['billy/testSession']    			= 'billy/testSession/';  // Billy controller, 
 $route['billy/handleLanguage']    		= 'billy/handleLanguage/';  // Billy controller, handleLanguage method
 $route['billy/handlePagination']    	= 'billy/handlePagination/';  // Billy controller, handlePagination method
 $route['billy/handleFormValidation']    = 'billy/handleFormValidation/';  // Billy controller, handlePagination method
+$route['billy/testDatabaseMethods']    	= 'billy/testDatabaseMethods/';  // Billy controller, testDatabaseMethods method
 
 
 // Route for news

@@ -165,4 +165,18 @@ class Billy extends CI_Controller {
                 }
         }
 
+        public function testDatabaseMethods() {
+                $this->load->database();
+
+
+                // always use transaction
+                $this->db->trans_start(TRUE);
+                $result = $this->db->get('news');
+                $this->db->trans_complete();
+
+                foreach ($result->result() as $row) {
+                        print_r($row);
+                }
+        }
+
 }
