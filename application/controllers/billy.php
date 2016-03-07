@@ -54,6 +54,12 @@ class Billy extends CI_Controller {
                 
                 $this->load->helper( array('array', 'cookie', 'date', 'directory', 'download', 'inflector', 'url') );
                
-                show_error('message', '401', 'An Error Was Encountered');
+                $this->benchmark->mark('code_start');
+
+                // Some code happens here
+
+                $this->benchmark->mark('code_end');
+
+                echo $this->benchmark->elapsed_time('code_start', 'code_end');
         }
 }
