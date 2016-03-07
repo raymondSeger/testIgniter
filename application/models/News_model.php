@@ -1,8 +1,10 @@
 <?php
 class News_model extends CI_Model {
 
-	/*
-	 * the database table:
+	/* 
+     * http://www.codeigniter.com/user_guide/tutorial/news_section.html
+     * 
+ 	 * the database table:
 	 * CREATE TABLE news (
         id int(11) NOT NULL AUTO_INCREMENT,
         title varchar(128) NOT NULL,
